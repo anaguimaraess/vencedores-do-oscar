@@ -1,0 +1,42 @@
+Nome: Ana Carolina Guimarães Sousa Equipe 2
+PERGUNTAS DE BANCO DE DADOS
+----------------------------------------------------------------------------
+
+Quantas vezes Natalie Portman foi indicada ao Oscar?
+Quantas ela ganhou?
+
+R: Ela ganhou 1 vezes e foi indicada 2 vezes.
+
+CODIGO: SELECT COUNT(*) FROM vencedoresdooscar WHERE Nominee = "Natalie Portman";
+SELECT COUNT(*) FROM vencedoresdooscar WHERE Nominee = "Natalie Portman" AND won = "YES";
+
+----------------------------------------------------------------------------
+
+Amy Adams já ganhou algum Oscar?
+R: Não.
+
+CODIGO: SELECT won FROM vencedoresdooscar WHERE Nominee = "Amy Adams";
+
+----------------------------------------------------------------------------
+
+Toy Story 3 ganhou Oscar em quais anos?
+R: Em 2010
+
+CODIGO: SELECT year FROM vencedoresdooscar WHERE Nominee = "Toy Story 3";
+
+-----------------------------------------------------------------------------
+
+Quem tem mais Oscars: a categoria "Melhor Ator" ou "Melhor Filme"?
+R: Melhor ator deu 85 e melhor filme deu 83, logo "Melhor Ator" tem mais Oscars.
+
+CODIGO: SELECT COUNT(*) FROM vencedoresdooscar WHERE category = "Best picture" AND won = "YES";  
+SELECT COUNT(*) FROM vencedoresdooscar WHERE category = "Actor -- Leading Role" AND won = "YES"; 
+
+
+
+
+
+
+
+
+
